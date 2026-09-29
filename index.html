@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ramón Areyuna — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio de Ramón Areyuna, desarrollador Full-Stack de San Juan, Argentina.">
+  <meta name="theme-color" content="#2b2a4a">
+  <meta property="og:title" content="Ramón Areyuna — Full-Stack Developer">
+  <meta property="og:description" content="Sistemas de gestión, bots y aplicaciones web desde San Juan, Argentina.">
+  <meta property="og:image" content="assets/profile.png">
+  <link rel="icon" href="assets/profile.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Filtros de acuarela / bordes irregulares -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="7"/>
+        <feDisplacementMap in="SourceGraphic" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="rough-soft" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="3" seed="2"/>
+        <feDisplacementMap in="SourceGraphic" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="rough-text" x="-20%" y="-60%" width="140%" height="220%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="4"/>
+        <feDisplacementMap in="SourceGraphic" scale="2.5"/>
+      </filter>
+      <filter id="paint" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="4" seed="11"/>
+        <feDisplacementMap in="SourceGraphic" scale="22" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top">RA</a>
+    <nav>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#skills">Skills</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero: pantalla de título -->
+  <section class="hero" id="top">
+    <svg class="landscape" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#23244a"/>
+          <stop offset=".38" stop-color="#5b3f63"/>
+          <stop offset=".62" stop-color="#b86f6a"/>
+          <stop offset=".8" stop-color="#e5a57a"/>
+        </linearGradient>
+        <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#8e4a42"/>
+          <stop offset="1" stop-color="#2b2a4d"/>
+        </linearGradient>
+        <radialGradient id="glow">
+          <stop offset="0" stop-color="#f7d49a" stop-opacity=".6"/>
+          <stop offset="1" stop-color="#f7d49a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="haze">
+          <stop offset="0" stop-color="#f2c7b0" stop-opacity=".3"/>
+          <stop offset="1" stop-color="#f2c7b0" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset=".55" stop-color="#2b2a4d" stop-opacity="0"/>
+          <stop offset="1" stop-color="#2b2a4d"/>
+        </linearGradient>
+      </defs>
+      <rect width="1600" height="900" fill="url(#sky)"/>
+      <circle cx="1120" cy="560" r="260" fill="url(#glow)"/>
+      <circle cx="1120" cy="575" r="62" fill="#f8e2b0" opacity=".9"/>
+      <g fill="url(#haze)">
+        <ellipse cx="300" cy="260" rx="340" ry="46"/>
+        <ellipse cx="1000" cy="200" rx="420" ry="40"/>
+        <ellipse cx="1400" cy="340" rx="300" ry="34"/>
+      </g>
+      <!-- Andes lejanos -->
+      <g filter="url(#paint)">
+        <path fill="#7d5470" opacity=".85" d="M-40 640 L80 520 L150 560 L260 430 L330 500 L420 410 L520 520 L600 470 L700 540 L800 440 L880 490 L960 400 L1060 500 L1150 450 L1260 540 L1360 430 L1450 500 L1560 440 L1650 520 L1650 700 L-40 700 Z"/>
+        <path fill="#efe0d0" opacity=".45" d="M245 445 L260 430 L290 462 L272 458 Z M945 415 L960 400 L988 432 L966 428 Z M1345 445 L1360 430 L1388 460 L1368 455 Z M405 424 L420 410 L445 440 L428 436 Z"/>
+        <path fill="#673f58" d="M-40 690 L120 600 L260 640 L400 570 L560 640 L720 590 L880 650 L1040 580 L1200 640 L1380 590 L1650 650 L1650 760 L-40 760 Z"/>
+      </g>
+      <!-- Mesetas rojas (Ischigualasto) -->
+      <g filter="url(#paint)">
+        <path fill="#9c4b3f" d="M-40 760 L60 760 L90 690 L260 685 L300 760 L520 770 L560 715 L640 712 L690 770 L1000 780 L1040 700 L1250 694 L1290 780 L1650 790 L1650 900 L-40 900 Z"/>
+        <path fill="#c56a4e" opacity=".55" d="M95 693 L255 688 L262 705 L100 710 Z M1045 703 L1245 697 L1252 716 L1050 720 Z M565 718 L636 715 L644 730 L570 732 Z"/>
+        <path fill="url(#ground)" d="M-40 820 Q400 780 800 815 T1650 810 L1650 900 L-40 900 Z"/>
+      </g>
+      <!-- Arbustos -->
+      <g fill="#3d3a33" opacity=".75" filter="url(#rough-soft)">
+        <ellipse cx="180" cy="820" rx="40" ry="16"/><ellipse cx="420" cy="835" rx="28" ry="12"/>
+        <ellipse cx="760" cy="818" rx="46" ry="15"/><ellipse cx="1180" cy="826" rx="36" ry="13"/>
+        <ellipse cx="1460" cy="815" rx="52" ry="17"/><ellipse cx="960" cy="845" rx="24" ry="10"/>
+      </g>
+      <rect width="1600" height="900" fill="url(#fade)"/>
+    </svg>
+
+    <div class="hero-content">
+      <p class="eyebrow">San Juan · Argentina</p>
+      <h1 class="title">Ramón Areyuna</h1>
+      <div class="banner"><span id="typed">Full-Stack Developer</span><span class="caret">_</span></div>
+      <p class="lead">
+        Construyo sistemas que resuelven problemas reales: gestión académica para un instituto,
+        punto de venta para comercios y bots que le hacen la vida más fácil a una comunidad.
+      </p>
+      <div class="cta">
+        <a class="prompt" href="#proyectos"><kbd>A</kbd> Ver proyectos</a>
+        <a class="prompt" href="mailto:ramonareyuna09@gmail.com"><kbd>Y</kbd> Escribime</a>
+      </div>
+    </div>
+    <p class="press-start">▼ Bajá para empezar</p>
+  </section>
+
+  <main>
+    <!-- Sobre mí -->
+    <section class="screen" id="sobre-mi">
+      <header class="screen-head">
+        <h2>Sobre mí</h2>
+        <div class="points"><strong>C1</strong><span>Inglés</span></div>
+      </header>
+
+      <div class="character">
+        <div class="medallion">
+          <img src="assets/profile.png" alt="Foto de Ramón Areyuna" width="240" height="240">
+        </div>
+        <div class="wc-panel sheet">
+          <h3>Ramón Areyuna</h3>
+          <p class="bio">
+            Desarrollador full-stack con experiencia práctica creando aplicaciones web y sistemas de gestión
+            para casos reales en salud, educación y coordinación de eventos. Me enfoco en la arquitectura,
+            la integración de bases de datos y la optimización de procesos.
+          </p>
+          <dl>
+            <div><dt>Trabajo</dt><dd>Desarrollador en <b>Excelencia Digital</b>: sistemas clínicos con C#, .NET y SQL Server · desde sept. 2025</dd></div>
+            <div><dt>Formación</dt><dd>Tecnicatura Superior en Desarrollo de Software · IES Gral. Manuel Belgrano (2022–2025)</dd></div>
+            <div><dt>Origen</dt><dd>San Juan, Argentina 🇦🇷</dd></div>
+            <div><dt>Idiomas</dt><dd>Español (nativo) · Inglés C1 (certificado EF SET)</dd></div>
+            <div><dt>Entrenando</dt><dd>IA · Data Science · Python — 5 certificaciones de Cisco en 2025</dd></div>
+            <div><dt>Pasiones</dt><dd>Código limpio · Resolver problemas · osu! · Gaming 🎮</dd></div>
+          </dl>
+          <p class="motto">“Soluciones escalables, un commit a la vez.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="screen" id="proyectos">
+      <header class="screen-head">
+        <h2>Proyectos</h2>
+        <div class="points"><strong>3</strong><span>Misiones completas</span></div>
+      </header>
+
+      <article class="project">
+        <div class="wc-panel project-info">
+          <p class="tag">Laravel · Vue 3 · Inertia · MySQL</p>
+          <h3>Sistema Académico IES</h3>
+          <p>
+            Plataforma de gestión académica integral para el Instituto de Educación Superior
+            General Manuel Belgrano. Digitaliza inscripciones, mesas de examen, legajos,
+            notas, asistencias y validación de correlativas.
+          </p>
+          <ul class="features">
+            <li>Roles y permisos configurables desde la interfaz</li>
+            <li>Flujo de carga y aprobación de notas</li>
+            <li>Actas, constancias y reportes en PDF</li>
+            <li>Importación masiva desde Excel y tours guiados</li>
+          </ul>
+          <a class="prompt small" href="https://github.com/Areyuna09/Sistema-Academico-IES" target="_blank" rel="noopener"><kbd>A</kbd> Ver código</a>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <div class="win">
+            <div class="win-bar"><i></i><i></i><i></i></div>
+            <div class="ies-grid">
+              <div class="ies-side"><b></b><b></b><b></b><b></b><b></b></div>
+              <div class="ies-main">
+                <div class="ies-stats"><span>Inscriptos<strong>1.284</strong></span><span>Mesas<strong>42</strong></span><span>Actas<strong>318</strong></span></div>
+                <div class="ies-table">
+                  <div><em>Programación II</em><u class="ok">Regular</u></div>
+                  <div><em>Base de Datos</em><u class="ok">Aprobada</u></div>
+                  <div><em>Ingeniería de Software</em><u class="warn">Falta correlativa</u></div>
+                  <div><em>Redes</em><u class="ok">Inscripto</u></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project reverse">
+        <div class="wc-panel project-info">
+          <p class="tag">Python · discord.py · Steam API · Oracle Cloud</p>
+          <h3>Vapora 💨</h3>
+          <p>
+            Bot de Discord: pegás un link de Steam y te dice cuánto sale en pesos argentinos,
+            con los impuestos vigentes según el medio de pago. Sin comandos, detecta los links solo.
+          </p>
+          <ul class="features">
+            <li>Juegos, DLC, paquetes y bundles, varios por mensaje</li>
+            <li>Lista de deseados con aviso cuando entran en oferta</li>
+            <li>Alertas de rebajas de Steam y ofertas diarias</li>
+            <li>Caché de precios y cotización, tests con pytest</li>
+          </ul>
+          <a class="prompt small" href="https://github.com/Areyuna09/Vapora" target="_blank" rel="noopener"><kbd>A</kbd> Ver código</a>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <div class="embed">
+            <p class="embed-title">🇦🇷 The Last of Us™ Parte I</p>
+            <p class="embed-sub">🎭 Acción · Aventura</p>
+            <div class="embed-grid">
+              <div><small>💵 Steam (AR)</small><b>USD 29,99</b><s>USD 59,99</s> <em>-50%</em></div>
+              <div><small>💳 Mercado Pago</small><b>$ 56.246</b></div>
+              <div><small>🟣 ARQ</small><b>$ 48.683</b></div>
+              <div><small>⭐ Reseñas</small><b>Muy positivas</b></div>
+            </div>
+            <span class="embed-btn">🔔 Avisame si baja</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="wc-panel project-info">
+          <p class="tag">Java 17 · JavaFX · SQLite · Maven</p>
+          <h3>Sistema Ferretería</h3>
+          <p>
+            Punto de venta de escritorio para ferreterías con interfaz moderna (AtlantaFX).
+            Arquitectura MVC con DAOs, base embebida e instaladores nativos para Windows y Linux.
+          </p>
+          <ul class="features">
+            <li>Autenticación con contraseñas hasheadas (BCrypt)</li>
+            <li>Dashboard de estadísticas de ventas</li>
+            <li>Gestión de productos e inventario</li>
+            <li>Instaladores .exe y .deb con jpackage</li>
+          </ul>
+          <a class="prompt small" href="https://github.com/Areyuna09/Sistema-Ferreteria" target="_blank" rel="noopener"><kbd>A</kbd> Ver código</a>
+        </div>
+        <div class="project-visual" aria-hidden="true">
+          <div class="win">
+            <div class="win-bar"><i></i><i></i><i></i></div>
+            <div class="ferre">
+              <div class="ferre-bars">
+                <span style="--h:40%"></span><span style="--h:65%"></span><span style="--h:52%"></span>
+                <span style="--h:80%"></span><span style="--h:70%"></span><span style="--h:92%"></span><span style="--h:60%"></span>
+              </div>
+              <div class="ferre-list">
+                <div><em>Martillo 500g</em><b>24</b></div>
+                <div><em>Tornillos 6x1"</em><b class="low">3</b></div>
+                <div><em>Cinta aisladora</em><b>58</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Skills: árbol de habilidades -->
+    <section class="screen wide" id="skills">
+      <header class="screen-head">
+        <h2>Skills</h2>
+        <div class="points"><strong id="skill-count">0</strong><span>Skill points</span></div>
+      </header>
+
+      <div class="skills-layout">
+        <div class="tree" id="tree" role="group" aria-label="Árbol de habilidades. Usá las flechas para moverte.">
+          <svg class="tree-paths" id="tree-paths" viewBox="0 0 800 560" aria-hidden="true"></svg>
+        </div>
+        <aside class="wc-panel skill-card" id="skill-card" aria-live="polite">
+          <div class="skill-card-icon" id="sc-icon"></div>
+          <p class="tag" id="sc-cat"></p>
+          <h3 id="sc-name"></h3>
+          <p id="sc-desc"></p>
+          <div class="skill-used" id="sc-used"></div>
+          <p class="skill-state" id="sc-state"></p>
+        </aside>
+      </div>
+      <div class="hints"><span><kbd>←→</kbd> Mover</span><span><kbd>A</kbd> Seleccionar</span></div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="screen contact" id="contacto">
+      <header class="screen-head">
+        <h2>¿Formamos equipo?</h2>
+      </header>
+      <p class="lead">¿Tenés un proyecto o una propuesta? Escribime y lo charlamos.</p>
+      <a class="big-mail" href="mailto:ramonareyuna09@gmail.com">ramonareyuna09@gmail.com</a>
+      <div class="socials">
+        <a class="prompt" href="https://github.com/Areyuna09" target="_blank" rel="noopener"><i class="devicon-github-original"></i> GitHub</a>
+        <a class="prompt" href="https://linkedin.com/in/ramonareyuna-dev" target="_blank" rel="noopener"><i class="devicon-linkedin-plain"></i> LinkedIn</a>
+        <a class="prompt" href="https://instagram.com/areyuna03" target="_blank" rel="noopener">◎ Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Hecho a mano por Ramón Areyuna · <span id="year"></span></span>
+    <span class="hints"><span><kbd>A</kbd> Seleccionar</span><span><kbd>B</kbd> <a href="#top">Volver arriba</a></span></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
