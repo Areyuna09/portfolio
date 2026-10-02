@@ -24,6 +24,25 @@ if (!reduceMotion) {
   setTimeout(tick, 2500);
 }
 
+// Copiar el mail al portapapeles. Si el navegador no lo permite, se deja actuar al mailto.
+document.querySelectorAll("[data-copy]").forEach(el => {
+  // La etiqueta puede estar dentro del enlace o en el hint que le sigue
+  const label = el.querySelector("[data-copy-label]") || el.nextElementSibling?.querySelector("[data-copy-label]");
+  const original = label?.textContent;
+  let timer;
+  el.addEventListener("click", e => {
+    if (!navigator.clipboard) return;
+    e.preventDefault();
+    navigator.clipboard.writeText(el.dataset.copy).then(() => {
+      if (!label) return;
+      label.textContent = "¡Mail copiado!";
+      el.classList.add("copied");
+      clearTimeout(timer);
+      timer = setTimeout(() => { label.textContent = original; el.classList.remove("copied"); }, 2200);
+    }).catch(() => { window.location.href = el.href; });
+  });
+});
+
 // ---------- Árbol de skills ----------
 // x/y en un lienzo de 800x560. cat: front | back | data | lang | core | locked
 // Dónde usé cada skill: repos públicos de GitHub + CV

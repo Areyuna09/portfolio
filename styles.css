@@ -309,7 +309,10 @@ u.warn { background: rgba(232, 69, 106, .2); color: #ff8aa5; }
   font-size: clamp(2.2rem, 7vw, 4.4rem); line-height: 1.1; color: var(--cream);
   word-break: break-word; border-bottom: 4px solid rgba(244, 232, 193, .4); transition: border-color .2s;
 }
-.big-mail:hover { border-color: var(--yellow); }
+.big-mail:hover, .big-mail.copied { border-color: var(--yellow); }
+.big-mail { margin-bottom: 10px; cursor: copy; }
+.copy-hint { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 30px; font-size: .8rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--cream); }
+.prompt.copied { background: var(--leaf); }
 .socials { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
 footer {
